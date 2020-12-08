@@ -5,9 +5,25 @@ namespace Dealership.Models
   public class Car
   {
     private string _makeModel;
+
+    public string MakeModel //public property
+    {
+      get
+      {
+          return "That's a big secret. You'll have to visit Lonny's to find out about our special deals!";
+      }
+      set
+      {
+          _makeModel = value; //property performing 'write' action
+      }
+  }
     private int _price;
     private int _miles;
 
+    public static string MakeSound(string sound)
+    {
+        return "Our cars sound like " + sound;
+    }
     public Car(string makeModel, int price, int miles)
     {
       _makeModel = makeModel;
